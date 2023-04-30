@@ -1,0 +1,59 @@
+<div class="container my-4 bg-light p-4">
+  <h1 class="mb-4">Review Details</h1>
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="mb-3">Flight Details:</h2>
+      <div class="flight-info mb-4">
+        <div class="d-flex flex-column">
+          <span class="label">Airlines:</span>
+          <span>{{data?.flight?.operatingAirlines}}</span>
+        </div>
+        <div class="d-flex flex-column">
+          <span class="label">Flight No:</span>
+          <span>{{data?.flight?.flightNumber}}</span>
+        </div>
+        <div class="d-flex flex-column">
+          <span class="label">Departure City:</span>
+          <span>{{data?.flight?.departureCity}}</span>
+        </div>
+        <div class="d-flex flex-column">
+          <span class="label">Arrival City:</span>
+          <span>{{data?.flight?.arrivalCity}}</span>
+        </div>
+        <div class="d-flex flex-column">
+          <span class="label">Date of Departure:</span>
+          <span>{{data?.flight?.dateOfDeparture}}</span>
+        </div>
+        <div class="d-flex flex-column">
+          <span class="label">Estimated Departure Time:</span>
+          <span>{{data?.flight?.estimatedDepartureTime}}</span>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h2 class="mb-3">Passenger Details:</h2>
+      <div class="passenger-info mb-4">
+        <div class="d-flex flex-column">
+          <span class="label">First Name:</span>
+          <span>{{data?.passenger?.firstName}}</span>
+        </div>
+        <div class="d-flex flex-column">
+          <span class="label">Last Name:</span>
+          <span>{{data?.passenger?.lastName}}</span>
+        </div>
+        <div class="d-flex flex-column">
+          <span class="label">Email:</span>
+          <span>{{data?.passenger?.email}}</span>
+        </div>
+        <div class="d-flex flex-column">
+          <span class="label">Phone:</span>
+          <span>{{data?.passenger?.phone}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    Enter the number of bags to check in:<input type="text" [(ngModel)] ="noOfbags" />
+      <button (click)="checkIn(noOfbags)">Check In</button>
+ 
+  
